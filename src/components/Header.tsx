@@ -1,12 +1,13 @@
 "use client";
 
-import Image from "next/image";
-import logo from "../../public/logo.png";
-import { MagnifyingGlassIcon, UserCircleIcon } from "@heroicons/react/24/solid";
-import Avatar from "react-avatar";
-import { useBoardStore } from "@/store/BoardStore";
 import { useEffect, useState } from "react";
-import fetchSuggestion from "@/lib/fetchSuggesntion";
+import Image from "next/image";
+import Avatar from "react-avatar";
+import logo from "../../public/logo.png";
+
+import { MagnifyingGlassIcon, UserCircleIcon } from "@heroicons/react/24/solid";
+import { useBoardStore } from "@/store/BoardStore";
+// import fetchSuggestion from "@/lib/fetchSuggesntion";
 
 export function Header() {
   const { searchString, setSearchString, board } = useBoardStore(
@@ -17,8 +18,8 @@ export function Header() {
   const [suggestion, setSuggestion] = useState<string>("");
 
   useEffect(() => {
+    //This is to setup chatGPT API, but you have to pay to get access.... but the code ir ready, checkout src/app/api/generateSummary
     // if (board.columns.size === 0) return;
-
     setLoading(true);
 
     // const fetchSuggesntionFunction = async () => {

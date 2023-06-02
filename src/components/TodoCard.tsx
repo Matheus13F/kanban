@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
-import getUrl from "@/lib/getUrl";
-import { useBoardStore } from "@/store/BoardStore";
-import { XCircleIcon } from "@heroicons/react/24/solid";
+import Image from "next/image";
 import {
   DraggableProvidedDragHandleProps,
   DraggableProvidedDraggableProps,
 } from "react-beautiful-dnd";
-import Image from "next/image";
+
+import getUrl from "@/lib/getUrl";
+import { XCircleIcon } from "@heroicons/react/24/solid";
+import { useBoardStore } from "@/store/BoardStore";
 
 type TodoCardProps = {
   todo: Todo;

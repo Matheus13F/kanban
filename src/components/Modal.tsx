@@ -1,12 +1,13 @@
 "use client";
 
 import { FormEvent, Fragment, useRef } from "react";
+import Image from "next/image";
+import { TaskTypeRadioGroup } from "./TaskTypeRadioGroup";
+
+import { PhotoIcon } from "@heroicons/react/24/solid";
 import { Dialog, Transition } from "@headlessui/react";
 import { useModalStore } from "@/store/ModalStore";
 import { useBoardStore } from "@/store/BoardStore";
-import { TaskTypeRadioGroup } from "./TaskTypeRadioGroup";
-import Image from "next/image";
-import { PhotoIcon } from "@heroicons/react/24/solid";
 
 export default function Modal() {
   const imagePickerRef = useRef<HTMLInputElement>(null);

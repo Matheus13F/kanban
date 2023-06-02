@@ -1,8 +1,9 @@
 "use client";
 
-import { useBoardStore } from "@/store/BoardStore";
 import { useEffect } from "react";
 import { DragDropContext, DropResult, Droppable } from "react-beautiful-dnd";
+
+import { useBoardStore } from "@/store/BoardStore";
 import { Column } from "./Column";
 
 export function Board() {
